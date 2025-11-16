@@ -1,0 +1,82 @@
+/* Banda completa con aletas diagonales a los lados */
+.chl-avatars-wrap{
+  position: relative;
+  padding: 28px 0 8px;
+  overflow: hidden;                 /* oculta inclinaciones */
+  background: var(--bg);            /* mismo fondo de la landing */
+}
+
+.chl-avatars-wrap::before,
+.chl-avatars-wrap::after{
+  /* “alas” laterales diagonales planas (sin blur) */
+  content:"";
+  position:absolute; top:0; bottom:0; width: 18vw; min-width: 120px;
+  background: linear-gradient(180deg, var(--panel-soft), var(--panel-soft));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+.chl-avatars-wrap::before{
+  left:-10vw;
+  transform: skewX(-18deg);
+}
+.chl-avatars-wrap::after{
+  right:-10vw;
+  transform: skewX(18deg);
+}
+
+/* Cinta de tarjetas */
+.chl-avatars{
+  display:flex; gap: 18px;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 8px 0 22px;
+  transform: translateZ(0);         /* perf */
+  flex-wrap: nowrap;                 /* una fila */
+  overflow-x: auto;                  /* en móvil permite deslizar */
+  scrollbar-width: none;
+}
+.chl-avatars::-webkit-scrollbar{ display:none; }
+
+/* Tarjeta/Marco plano */
+.chl-avatars .card{
+  flex: 0 0 clamp(160px, 22vw, 240px);
+  height: clamp(200px, 30vw, 300px);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transform-origin: center bottom;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.chl-avatars .card img{
+  width: 100%; height: 100%; object-fit: cover; display:block;
+}
+
+/* Rotaciones alternadas suaves y desplazamientos verticales leves */
+.chl-avatars .card.tilt-0{ transform: rotate(-6deg) translateY(8px); }
+.chl-avatars .card.tilt-1{ transform: rotate(-2deg) translateY(0); }
+.chl-avatars .card.tilt-2{ transform: rotate(2deg)  translateY(6px); }
+.chl-avatars .card.tilt-3{ transform: rotate(5deg)  translateY(14px); }
+.chl-avatars .card.tilt-4{ transform: rotate(-4deg) translateY(10px); }
+
+/* Hover: sutil lift, plano */
+@media (hover:hover){
+  .chl-avatars .card:hover{
+    transform: translateY(-6px) rotate(0deg);
+    border-color: #e0dbd3;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+  }
+}
+
+/* Responsivo: más compacta en móviles */
+@media (max-width: 740px){
+  .chl-avatars .card{
+    border-radius: 18px;
+  }
+  .chl-avatars-wrap::before,
+  .chl-avatars-wrap::after{
+    width: 22vw; min-width: 88px;
+  }
+}

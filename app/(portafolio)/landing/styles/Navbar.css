@@ -1,0 +1,124 @@
+:root{
+  --bg:#F7F3EE;
+  --panel:#FFFFFF;
+  --text:#1B1A1A;
+  --muted:#6B6A6A;
+  --outline:#D7D1CA;
+  --cream:#F6EEE3; /* color crema para texto del botón */
+}
+
+/* Barra superior plana y full-width */
+.chl-nav{
+  position: sticky; top:0; z-index:50;
+  width:100%;
+  background: var(--bg);
+  /* sin borde inferior */
+}
+
+/* Usamos grid de 3 columnas: logo | nombre centrado | menú/burger  */
+.chl-nav-inner{
+  display:grid;
+  grid-template-columns: 400px 1fr 400px; /* col central flexible */
+  align-items:center;
+  gap: 12px;
+  height: 72px;
+  padding: 0 16px;
+}
+
+/* IZQUIERDA: logo */
+.chl-logo{
+  display:grid; place-items:center;
+  width:48px; height:48px;
+  text-decoration:none;
+}
+.chl-logo img{ display:block; }
+
+/* CENTRO: nombre (centrado real) */
+.chl-brand{
+  justify-self:center;
+  text-align:center;
+  line-height:1.1;
+  font-weight: 900;
+  letter-spacing:.2px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.chl-brand .brand-full{ display:inline; }
+.chl-brand .brand-short{ display:none; }
+
+/* DERECHA: menú en desktop */
+.chl-menu{
+  justify-self:end;
+  display:flex; gap:18px; align-items:center;
+}
+.chl-menu a{
+  color: var(--text); text-decoration:none; font-weight:700;
+}
+.chl-menu a:hover{ text-decoration: underline; }
+
+/* Botón principal: texto crema */
+.btn-nav{
+  display:inline-flex; align-items:center; justify-content:center;
+  height: 36px; padding: 0 14px;
+  border-radius: 999px; border:1px solid var(--outline);
+  font-weight: 900; text-decoration:none;
+}
+.btn-primary{
+  background: #111; color: var(--cream);
+  border-color: #111;
+}
+.btn-primary:hover{ filter: brightness(1.06); transform: translateY(-1px); }
+.btn-primary{ transition: transform .12s ease, filter .12s ease; }
+
+/* Burger (oculto en desktop) */
+.chl-burger{
+  display:none;
+  background:none; border:0; width:40px; height:40px; cursor:pointer;
+  justify-self:end;
+}
+.chl-burger span{
+  display:block; height:2px; background:var(--text); margin:7px 6px;
+  transition: transform .18s ease, opacity .18s ease;
+}
+/* animación simple de X */
+.chl-burger.is-open span:nth-child(1){ transform: translateY(9px) rotate(45deg); }
+.chl-burger.is-open span:nth-child(2){ opacity:0; }
+.chl-burger.is-open span:nth-child(3){ transform: translateY(-9px) rotate(-45deg); }
+
+/* Responsive: en móvil, short name, menú desplegable ocupando ancho */
+@media (max-width: 860px){
+  .chl-nav-inner{
+    grid-template-columns: 48px 1fr 40px;
+    padding: 0 12px;
+  }
+
+  /* mostrar nombre corto en móvil */
+  .chl-brand .brand-full{ display:none; }
+  .chl-brand .brand-short{ display:inline; }
+
+  /* mostrar burger, ocultar menú horizontal */
+  .chl-burger{ display:block; }
+  .chl-menu{
+    position: fixed;
+    left:0; right:0; top:72px; /* justo bajo el header */
+    background: var(--panel);
+    border-top: 1px solid var(--outline);
+    display:none;
+    flex-direction:column;
+    align-items: stretch;
+    gap:8px;
+    padding: 12px;
+    /* ocupa todo el ancho de pantalla */
+    width: 100%;
+    box-shadow: 0 12px 28px rgba(0,0,0,.06);
+  }
+  .chl-menu.is-open{ display:flex; }
+  .chl-menu a{
+    padding:.8rem 1rem; border-radius: 12px;
+  }
+  .chl-menu a:hover{
+    background: #F2ECE6; text-decoration:none;
+  }
+}
