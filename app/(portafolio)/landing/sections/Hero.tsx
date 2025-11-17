@@ -1,7 +1,8 @@
 import Image from 'next/image';
 
 import '../styles/Hero.css';
-import fotoCentral from '@/app/fotografias/f9.jpg';
+// import fotoCentral from '@/app/fotografias/f9.jpg';
+import coverflow from '@/app/fotografias/portada.png';
 
 export default function Hero() {
   return (
@@ -28,7 +29,7 @@ export default function Hero() {
         </header>
 
         {/* Imagen centrada */}
-        <figure className="chl-hero-figure">
+        {/* <figure className="chl-hero-figure">
           <div className="img-frame">
             <Image
               src={fotoCentral}
@@ -38,7 +39,19 @@ export default function Hero() {
             />
           </div>
    
-        </figure>
+        </figure> */}
+                {/* Imagen centrada */}
+ <figure className="chl-hero-figure-coverflow full-bleed" aria-hidden="true">
+  <div className="img-frame-coverflow">
+    <Image
+      src={coverflow}
+      alt="Coverflow"
+      priority
+      sizes="100vw"
+      style={{ width: '100%', height: 'auto' }}
+    />
+  </div>
+</figure>
         <section className="chl-hero-focus" aria-label="Enfoques principales">
           <article className="focus-item">
             <h3 className='sub'>Selección de Talento</h3>

@@ -184,3 +184,40 @@
 .sub{
   font-family: Georgia, Times New Roman, ui-serif, serif;
 }
+
+/* =======================
+   cover
+   ======================= */
+
+   /* ---- Full-bleed util ---- */
+.full-bleed{
+  /* ocupa todo el ancho de la ventana, ignorando el .container */
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
+/* Coverflow a ancho completo */
+.chl-hero-figure-coverflow{
+  margin-top: 16px;  /* separacion del contenido anterior */
+}
+
+.img-frame-coverflow{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;        /* quítalo si la quieres totalmente cuadrada */
+  background: var(--panel);   /* por si la imagen tarda en cargar */
+  /* opcional: altura mínima para evitar salto de layout en móviles */
+  min-height: 120px;
+}
+
+.img-frame-coverflow img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* En pantallas muy pequeñas puedes reducir el radio */
+@media (max-width: 520px){
+  .img-frame-coverflow{ border-radius: 18px; }
+}
