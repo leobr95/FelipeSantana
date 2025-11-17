@@ -1,6 +1,7 @@
 'use client';
 
 import Image, { StaticImageData } from 'next/image';
+
 import '@/app/(portafolio)/landing/styles/FeatureMosaic.css';
 import fotoPanoramica from '@/app/fotografias/f11.png';
 

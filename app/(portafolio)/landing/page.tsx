@@ -5,7 +5,6 @@ import Activities from './sections/Activities';
 import Blog from './sections/Blog';
 import Contact from './sections/Contact';
 import Hero from './sections/Hero';
-import HeroAvatars from './sections/HeroAvatars';
 import Impact from './sections/Impact';
 import Services from './sections/Services';
 
@@ -36,7 +35,6 @@ export default function Page() {
         <section id="contact" className="section container">
           <Contact />
         </section>
-         <HeroAvatars />
       </main>
       <footer className="chl-footer">
         <div className="container chl-footer-inner">

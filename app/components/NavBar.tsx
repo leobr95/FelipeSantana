@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+
 import '@/app/(portafolio)/landing/styles/Navbar.css';
 import logo from '@/app/fotografias/LOGO ICON FELIPE SANTANA .png';
 

@@ -1,5 +1,54 @@
-.chl-blog-grid{
+/* ===== Videos verticales ===== */
+.chl-video-grid{
   display:grid; gap:18px; margin-top: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1080px){ .chl-video-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px){ .chl-video-grid{ grid-template-columns: 1fr; } }
+
+.chl-video-item{ display:grid; gap:10px; }
+.chl-video-title{ margin:0; font-size:1rem; font-weight:800; color: var(--text); }
+
+.chl-video-frame{
+  position: relative; width:100%; aspect-ratio: 9 / 16;
+  overflow: hidden; border-radius: 14px; background: #000;
+  /* sombra leve y limpia */
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+.chl-video-frame iframe{
+  position:absolute; inset:0; width:100%; height:100%; border:0;
+}
+.chl-video-desc{ margin:0; color: var(--muted); }
+
+/* ===== Iconos centrados de redes ===== */
+.chl-socials{
+  display:flex; gap:14px; justify-content:center; align-items:center;
+  margin: 10px 0 22px;
+}
+.chl-social-link{
+  display:grid; place-items:center;
+  width:44px; height:44px; border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform .12s ease, filter .15s ease, background .15s ease, border-color .15s ease;
+}
+.chl-social-link:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+  border-color: rgba(255,255,255,.16);
+}
+
+/* (Opcional) matiz sutil por marca al hover */
+.chl-social-link.tiktok:hover{ background: #171717; }
+.chl-social-link.instagram:hover{ background: #1f1a23; }
+.chl-social-link.youtube:hover{ background: #1a1414; }
+
+/* ===== Artículos (texto) ===== */
+.chl-blog-grid{
+  display:grid; gap:18px; margin-top: 18px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 @media (max-width: 980px){ .chl-blog-grid{ grid-template-columns: 1fr 1fr; } }
