@@ -1,11 +1,11 @@
 import './styles/theme.css';
 
 import NavBar from './../../components/NavBar';
+import About from './sections/About';
 import Activities from './sections/Activities';
 import Blog from './sections/Blog';
 import Contact from './sections/Contact';
 import Hero from './sections/Hero';
-import Impact from './sections/Impact';
 import Services from './sections/Services';
 
 export const metadata = {
@@ -26,12 +26,12 @@ export default function Page() {
         <section id="services" className="section container">
           <Services />
         </section>
-        <section id="impact" className="section container">
-          <Impact />
-        </section>
         <section id="blog" className="section container">
           <Blog />
         </section>
+        <section id="about" className="section">
+  <About />
+</section>
         <section id="contact" className="section container">
           <Contact />
         </section>

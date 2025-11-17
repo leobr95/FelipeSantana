@@ -1,0 +1,121 @@
+/* ===== Sección About con fondo full-bleed ===== */
+.chl-about{
+  --about-bg: #5a684e;
+  --about-text: #f6f7f2;
+  --about-muted: #e7eadf;
+  --radius: 18px;
+
+  /* Control del tamaño consistente de foto y logo */
+  --media-max: 520px;
+  --media-ratio: 4 / 5; /* relación vertical/portrait para ambos */
+}
+
+.chl-about-fullbleed{
+  background: var(--about-bg);
+  color: var(--about-text);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 36px 0;
+}
+
+.chl-about-inner{
+  display: grid;
+  gap: 28px;
+}
+
+/* ===== Filas ===== */
+.chl-about-row{
+  display: grid;
+  grid-template-columns: 1.2fr .8fr; /* texto más ancho */
+  gap: 24px;
+  align-items: center;
+  padding: 6px 0;
+}
+
+/* Invertir: logo/imagen a la izquierda y texto a la derecha */
+.chl-about-row.row-invert{
+  grid-template-columns: .8fr 1.2fr;
+}
+
+/* En móviles, apilar: imagen encima del texto en ambas filas */
+@media (max-width: 980px){
+  .chl-about-row,
+  .chl-about-row.row-invert{
+    grid-template-columns: 1fr;
+  }
+  .chl-about-row.row-invert .media{ order: -1; } /* imagen primero en la invertida */
+}
+
+.chl-about-col.text{
+  display: grid; gap: 12px;
+}
+.chl-about-col.media{
+  display: grid; place-items: center;
+}
+
+/* ===== Tipografía ===== */
+.chl-about-title{
+  margin: 0;
+  font-size: clamp(20px, 3.2vw, 28px);
+  font-weight: 900;
+  letter-spacing: .2px;
+  color: var(--about-text);
+}
+.chl-about-subtitle{
+  margin: 0;
+  font-size: clamp(18px, 2.8vw, 22px);
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: var(--about-text);
+}
+
+.chl-about-lead{
+  margin: 0;
+  color: var(--about-text);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.chl-about-body{
+  margin: 0;
+  color: var(--about-muted);
+  line-height: 1.6;
+}
+
+/* ===== Caja de media unificada (foto y logo mismo tamaño) ===== */
+.chl-about-mediaBox{
+  width: 100%;
+  max-width: var(--media-max);
+  aspect-ratio: var(--media-ratio);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(0,0,0,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 14px 28px rgba(0,0,0,.25);
+  display: grid;
+  place-items: center;
+}
+
+.chl-about-mediaBox :is(img, picture, video){
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tratamiento especial para el logo:
+   - fondo claro para contrastar
+   - el logo no debe recortarse: contain + padding */
+.chl-about-mediaBox.logo-box{
+  background: #ffffff;
+}
+.chl-about-mediaBox.logo-box :is(img, picture){
+  object-fit: contain;
+  padding: 18px;
+}
+
+/* Ajustes en pantallas pequeñas */
+@media (max-width: 520px){
+  .chl-about-fullbleed{ padding: 28px 0; }
+  .chl-about-mediaBox{ max-width: 420px; }
+}

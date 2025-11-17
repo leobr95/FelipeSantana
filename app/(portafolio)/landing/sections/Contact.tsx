@@ -63,7 +63,6 @@ export default function Contact() {
   return (
     <section className="ctc container">
       <header className="ctc-head">
-        <p className="eyebrow">Hablemos</p>
         <h2 className="ctc-title">Contacta conmigo</h2>
         <p className="ctc-sub">
           Respuesta rápida por WhatsApp o correo. También puedo devolver la llamada.
@@ -74,10 +73,10 @@ export default function Contact() {
         {/* Tarjeta lateral */}
         <aside className="ctc-card">
           <div className="ctc-card-head">
-            <div className="ctc-avatar" aria-hidden>LB</div>
+            <div className="ctc-avatar" aria-hidden>CFM</div>
             <div className="ctc-card-meta">
-              <h3>Leonardo D. Burbano</h3>
-              <p>Full-Stack .NET · React/Next · SQL · Docker</p>
+              <h3>Christian F. Meneses S.</h3>
+              <p>Psicólogo</p>
             </div>
           </div>
 
