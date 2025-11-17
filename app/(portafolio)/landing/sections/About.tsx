@@ -3,9 +3,7 @@
 import Image from 'next/image';
 import '../styles/About.css';
 
-// Foto usada antes en Hero
 import fotoCentral from '@/app/fotografias/f7.jpg';
-// Logo (ruta con espacios está bien si el archivo existe)
 import logo from '@/app/fotografias/logo1.png';
 
 export default function About() {
