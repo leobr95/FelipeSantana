@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import '../styles/About.css';
 
-import fotoCentral from '@/app/fotografias/f7.jpg';
 import logo from '@/app/fotografias/logo1.png';
+import fotoCentral from '@/app/fotografias/personalfoto.jpg';
 
 export default function About() {
   return (
