@@ -55,7 +55,7 @@ export default function About() {
             </div>
 
             <div className="chl-about-col text">
-              <h3 className="chl-about-subtitle">Sobre la práctica</h3>
+              <h3 className="chl-about-subtitle">Sobre mi marca</h3>
               <p className="chl-about-body">
                 Acompaño a organizaciones y personas en procesos de talento end-to-end:
                 mapeo de perfiles, entrevistas por competencias, assessment, bienestar y

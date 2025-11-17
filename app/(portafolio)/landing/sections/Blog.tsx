@@ -77,19 +77,19 @@ const VIDEOS = [
   {
     title: 'Selección por competencias en 60s',
     // ejemplo YouTube (video normal):
-    src: 'https://www.youtube.com/shorts/bhTQO8AhAVA?feature=share',
+    src: 'https://www.youtube.com/shorts/tnTfjWCVu9k?feature=share',
     description: 'Cómo preparar preguntas basadas en conductas observables.',
   },
   {
     title: 'Bienestar sin postureo (Short)',
     // ejemplo YouTube Shorts:
-    src: 'https://www.youtube.com/shorts/aqz-KE-bpKQ',
+    src: 'https://www.youtube.com/shorts/-4rZKoRtRew?feature=share',
     description: 'Intervenciones con métricas reales y participación del equipo.',
   },
   {
     title: 'Feedback que transforma',
     // ejemplo YouTube corto:
-    src: 'https://youtu.be/9bZkp7q19f0',
+    src: 'https://www.youtube.com/shorts/5Z9zXP-RzY0?feature=share',
     description: 'Claves para un 360° que se convierte en acciones concretas.',
   },
 ];
