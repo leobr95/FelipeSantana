@@ -206,7 +206,7 @@
   width: 100%;
   overflow: hidden;
   border-radius: 24px;        /* quítalo si la quieres totalmente cuadrada */
-  background: var(--panel);   /* por si la imagen tarda en cargar */
+  background: var(--bg);   /* por si la imagen tarda en cargar */
   /* opcional: altura mínima para evitar salto de layout en móviles */
   min-height: 120px;
 }

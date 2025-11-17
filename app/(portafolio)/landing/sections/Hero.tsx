@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import '../styles/Hero.css';
 // import fotoCentral from '@/app/fotografias/f9.jpg';
-import coverflow from '@/app/fotografias/portada.png';
+import coverflow from '@/app/fotografias/portada100.png';
 
 export default function Hero() {
   return (
