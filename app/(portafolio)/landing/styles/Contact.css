@@ -36,14 +36,16 @@
 }
 @media (max-width: 940px){ .ctc-grid{ grid-template-columns: 1fr; } }
 
-/* --- Card lateral --- */
+/* --- Card lateral ---  .card-persona{ background: #EFE6DA; }
+.card-empresa{ background: #C9B9A2; } */
 .ctc-card{
-  background: var(--card);
-  border: 1px solid var(--outline);
+ background: #EFE6DA;
+
   border-radius: 22px;
   padding: 20px;
   box-shadow: var(--shadow);
 }
+
 .ctc-card-head{ display:flex; gap:14px; align-items:center; margin-bottom: 14px; }
 .ctc-avatar{
   width:56px; height:56px; border-radius: 14px;
@@ -83,11 +85,10 @@
 
 /* --- Form --- */
 .ctc-form{
-  background: var(--card);
-  border: 1px solid var(--outline);
   border-radius: 22px;
   padding: 22px;
   box-shadow: var(--shadow);
+ background: #EFE6DA;
 }
 .ctc-form-title{
   display:flex; align-items:center; gap:8px;

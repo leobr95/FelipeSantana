@@ -5,10 +5,10 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { MdEmail, MdPhone, MdContentCopy, MdCheckCircle } from 'react-icons/md';
 import '@/app/(portafolio)/landing/styles/Contact.css';
 
-const WHATSAPP_PERSONAL = '573176820188';
-const LLAMADAS         = '573236504428';
-const WHATSAPP_EMPRESA = '573236504428';
-const MAIL_TO          = 'br.david@outlook.com';
+const WHATSAPP_PERSONAL = '573054282291';
+const LLAMADAS         = '573054282291';
+const WHATSAPP_EMPRESA = '573054282291';
+const MAIL_TO          = 'psicologofelipe6@gmail.com';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -33,7 +33,7 @@ export default function Contact() {
 
     // SIN POST por defecto → abre el cliente de correo
     if (!process.env.NEXT_PUBLIC_CONTACT_API) {
-      window.location.href = `mailto:${MAIL_TO}?subject=Contacto%20desde%20Portafolio&body=${encodeURIComponent(
+      window.location.href = `mailto:${MAIL_TO}?subject=Contacto%20desde%20Web&body=${encodeURIComponent(
         `Nombre: ${payload.name}\nEmail: ${payload.email}\n\n${payload.msg}`
       )}`;
       return;
@@ -56,7 +56,7 @@ export default function Contact() {
     }
   }
 
-  const wspText = encodeURIComponent('Hola, vengo de tu portafolio. ¿Podemos hablar?');
+  const wspText = encodeURIComponent('Hola, vengo de tu web. ¿Podemos hablar?');
   const wspPersonalHref = `https://wa.me/${WHATSAPP_PERSONAL}?text=${wspText}`;
   const wspEmpresaHref  = `https://wa.me/${WHATSAPP_EMPRESA}?text=${wspText}`;
 
@@ -122,7 +122,7 @@ export default function Contact() {
 
             <label className="in">
               <span>Mensaje</span>
-              <textarea name="message" rows={5} placeholder="Cuéntame brevemente sobre el proyecto" required />
+              <textarea name="message" rows={5} placeholder="Cuéntame brevemente sobre el servicio que quieres solicitar" required />
             </label>
 
             <div className="form-actions">

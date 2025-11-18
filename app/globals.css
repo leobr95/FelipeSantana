@@ -105,9 +105,11 @@ body{
   text-align: center;
 }
 .section-title{
-  font-size: var(--fs-2);
-  font-weight: 900;
-  letter-spacing: .2px;
+color: var(--text);
+  font-family: Georgia, Times New Roman, ui-serif, serif;
+  font-size: max(26px, min(4.8vw, 46px));
+  font-weight: 400;
+  display: block;
 }
 .section-sub{
   color: var(--muted);
@@ -127,7 +129,7 @@ body{
   backdrop-filter: blur(10px);
   transition: transform .12s ease, filter .15s ease, box-shadow .15s ease;
 }
-.btn:hover{ transform: translateY(-1px); filter: brightness(1.06); box-shadow: 0 10px 22px rgba(0,0,0,.35); }
+.btn:hover{ transform: translateY(-1px); filter: brightness(1.06); box-shadow: 0 4px 7px rgba(0, 0, 0, .35); }
 .btn-primary{ background: linear-gradient(90deg, var(--primary), var(--primary-2)); color:#0b0c11; border:0; }
 
 .card{

@@ -1,12 +1,13 @@
 'use client';
 
 import '../styles/Blog.css';
-import { FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 
 /** Perfiles (ajústalos a los reales) */
 const SOCIALS = {
-  instagram: 'https://www.instagram.com/tuusuario',
-  youtube: 'https://www.youtube.com/@tuusuario',
+  instagram: 'https://www.instagram.com/psicologofelipe_/',
+  tiktok: 'https://www.tiktok.com/@psicologofelipe_?_r=1&_t=ZS-91VLXhKQTaM',
+  youtube: 'https://www.youtube.com/channel/UCexMetkHmsI8YdVfKIea1ig',
 };
 
 /** Añade/actualiza un parámetro en la URL de forma segura */
@@ -148,6 +149,16 @@ export default function Blog() {
           title="YouTube"
         >
           <FaYoutube aria-hidden />
+        </a>
+                <a
+          className="chl-social-link tiktok"
+          href={SOCIALS.tiktok}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+          title="TikTok"
+        >
+          <FaTiktok aria-hidden />
         </a>
       </div>
     </div>

@@ -209,6 +209,8 @@
   background: var(--bg);   /* por si la imagen tarda en cargar */
   /* opcional: altura mínima para evitar salto de layout en móviles */
   min-height: 120px;
+  margin-top: -44px;
+  margin-bottom: -44px;
 }
 
 .img-frame-coverflow img{
